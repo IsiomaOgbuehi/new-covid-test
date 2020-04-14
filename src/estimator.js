@@ -20,14 +20,14 @@ const compute = (
     avgDailyIncomeInUSD, avgDailyIncomePopulation
   } = region;
 
-  const currentlyInfected = Math.trunc(reportedCases * 10 * period);
+  const currentlyInfected = Math.trunc(reportedCases * 10);
   impactData.currentlyInfected = currentlyInfected;
 
-  const severeImpact = Math.trunc(reportedCases * 50 * period); // Severe
+  const severeImpact = Math.trunc(reportedCases * 50); // Severe
   severeImpactData.currentlyInfected = severeImpact;
 
-  const infectionsByRequestedTime = Math.trunc(currentlyInfected * 512 * period); // Both
-  const severeInfectionsByRequestedTime = Math.trunc(severeImpact * 512 * period);
+  const infectionsByRequestedTime = Math.trunc(currentlyInfected * 512); // Both
+  const severeInfectionsByRequestedTime = Math.trunc(severeImpact * 512);
   impactData.infectionsByRequestedTime = infectionsByRequestedTime;
   severeImpactData.infectionsByRequestedTime = severeInfectionsByRequestedTime;
 
